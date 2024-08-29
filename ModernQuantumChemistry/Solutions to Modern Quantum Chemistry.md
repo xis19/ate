@@ -62,15 +62,17 @@ $$
 
 #### a
 
-Assume $\mathbf{A}$ and $\mathbf{B}$ has dimensions $M\times N$and $N \times M$,
+Assume $\mathbf{A}$ and $\mathbf{B}$ has dimensions $M\times N$ and $N \times M$ ,
 
 $$
-\begin{align}
+\begin{align*}
+
 \mbox{tr}\mathbf{AB} &=\sum_i^M\left(\mathbf{AB}\right)_{ii} \\
 &= \sum_i^M \left(\sum_j^N \mathbf{A}_{ij}\mathbf{B}_{ji}\right)_{ii}\\
 &= \sum_j^N \left(\sum_i^M \mathbf{B}_{ji}\mathbf{A}_{ij}\right)_{jj}\\
 &= \mbox{tr} \mathbf{BA}
-\end{align}
+
+\end{align*}
 $$
 
 #### b
