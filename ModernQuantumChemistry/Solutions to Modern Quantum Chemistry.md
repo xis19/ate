@@ -412,7 +412,7 @@ It can be easily observed that $N$ will be canceled out:
 
 $$
 \begin{align*}
-\Epsilon &\leq \frac{\langle \tilde\Phi|\hat{\mathbf{H}}|\tilde\Phi\rangle}{\langle \tilde\Phi | \tilde\Phi \rangle}\\
+E &\leq \frac{\langle \tilde\Phi|\hat{\mathbf{H}}|\tilde\Phi\rangle}{\langle \tilde\Phi | \tilde\Phi \rangle}\\
 &= \sqrt{\frac{2a}{\pi}}\cdot \langle\mathbf{e}^{-ax^2}|\hat{\mathbf H}|\mathbf{e}^{-ax^2}\rangle \\
 &=\sqrt\frac{2a}{\pi}\int_{-\infty}^{\infty}\left[-\frac{1}{2}\frac{\mbox{d}^2}{\mbox{d}x^2}\mathbf{e}^{-ax^2}- \delta(x)\right]\mathbf{e}^{-ax^2}\mbox{d}x\\
 &=\sqrt\frac{2a}{\pi}\left[a\int_{-\infty}^\infty\mbox{d}x\ \mathbf{e}^{-2ax^2}(1-2ax^2)- 1\right]\\
