@@ -188,7 +188,8 @@ Apply property 3 to $\mathbf{D}$:
 $$
 |\hat{\mathbf{P}}_{kl}\mathbf{D}| = -|\mathbf{D}|
 $$
-it is obvious that $\mathbf{D}=0$.
+
+it is obvious that $\mathbf{D}=0$ .
 
 #### 7
 
