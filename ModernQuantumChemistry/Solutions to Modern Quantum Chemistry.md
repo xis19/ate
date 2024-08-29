@@ -9,6 +9,7 @@ Based on the definition of matrix-vector multiplication, the conclusions are obv
 ###  1.2
 
 Note that
+
 $$
 \begin{align*}
 \mathbf{A}\mathbf{B} = \left(
@@ -20,11 +21,15 @@ $$
 \right) = \mathbf{B}\mathbf{A}
 \end{align*}
 $$
+
 thus
+
 $$
 \left[\mathbf{A}, \mathbf{B}\right] = 0
 $$
+
 which implies that $\mathbf{A}$ and $\mathbf{B}$ are commutable.
+
 $$
 \left\{\mathbf{A}, \mathbf{B}\right\} = 2\mathbf{A}\mathbf{B}
 $$
@@ -32,10 +37,13 @@ $$
 ### 1.3
 
 Since
+
 $$
 \left(\mathbf{AB}\right)_{ij} = \sum_k \mathbf{A}_{ik}\mathbf{B}_{kj}
 $$
+
 thus
+
 $$
 \left(\mathbf{AB}\right)^{\dagger}_{ji} &= \sum_k \mathbf{A}_{kj}\mathbf{B}_{ik} \\
 &= \sum_k \mathbf{B}_{ik}^\star\mathbf{A}_{kj}^\star \\
@@ -43,8 +51,8 @@ $$
 &= \left(\mathbf{B}^{\dagger}\mathbf{A}^\dagger\right)_{ji}
 $$
 
-
 which implies
+
 $$
 \left(\mathbf{AB}\right)^{\dagger}= \mathbf{B}^{\dagger}\mathbf{A}^{\dagger}
 $$
@@ -54,7 +62,8 @@ $$
 
 #### a
 
-Assume $\mathbf{A}$ and $\mathbf{B}$ has dimensions $M\times N$and $N \times M$ ,
+Assume $\mathbf{A}$ and $\mathbf{B}$ has dimensions $M\times N$and $N \times M$,
+
 $$
 \begin{align}
 \mbox{tr}\mathbf{AB} &=\sum_i^M\left(\mathbf{AB}\right)_{ii} \\
@@ -75,6 +84,7 @@ $$
 $$
 
 which implies
+
 $$
 \mathbf{AB}^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}
 $$
@@ -103,10 +113,13 @@ $$
 $$
 
 then
+
 $$
 \mathbf{AB} = \mathbf{BA}
 $$
+
 or
+
 $$
 \left[\mathbf{A}, \mathbf{B}\right] = 0
 $$
@@ -163,10 +176,13 @@ Omitted.
 #### 6
 
 Denote $\hat{\mathbf{P}}_{ij}$ to be the operator that swaps row $i$ and $j$ in a determinant. If a determinant $|\mathbf{D}|$ has row $k$ and $l$ equal, then
+
 $$
 |\hat{\mathbf{P}}_{kl}\mathbf{D}| = |\mathbf{D}|
 $$
+
 Apply property 3 to $\mathbf{D}$:
+
 $$
 |\hat{\mathbf{P}}_{kl}\mathbf{D}| = -|\mathbf{D}|
 $$
@@ -205,6 +221,7 @@ $$
 ### 1.7
 
 Assume $|\mathbf{A}|\neq 0$ , then $|\mathbf{A}^{-1}|\neq 0$ 
+
 $$
 \begin{align*}
 \mathbf{A}\vec{c}&=\mathbf{0} \\
@@ -227,35 +244,45 @@ $$
 ### 1.9
 
 Note the $i$ -th column of the matrix $\mathbf{U}$ as $\mathbf{U}_i$,
+
 $$
 \begin{align*}
 \mathbf{U}_i\mathbf{\omega} &= \left(\mathbf{c}^1\omega_1\ \mathbf{c}^2\omega_2\cdot\cdot\cdot\mathbf{c}^N\omega_N \right)
 \end{align*}
 $$
+
 and
+
 $$
 \begin{align*}
 \mathbf{OU} &= \left(\mathbf{Oc}^1\ \mathbf{Oc}^2\ \cdot\cdot\cdot\ \mathbf{Oc}^N\right)
 \end{align*}
 $$
+
 The proposition is obvious by comparing the columns.
 
 ### 1.10
 
 It can be seen that
+
 $$
 \frac{\omega-O_{11}}{O_{12}} = c = \frac{O_{21}}{\omega - O_{22}}
 $$
+
 or
+
 $$
 \omega^2-(O_{11}+O_{22})\omega+(O_{12}O_{21}-O_{11}O_{22}) = 0
 $$
+
 and the two roots of the equation are
+
 $$
 \begin{align*}
 \omega = \frac{1}{2}\left[O_{11} + O_{22} \pm \sqrt{\left(O_{11}-O_{22}\right)^2-4O_{12}O_{21}}\right]
 \end{align*}
 $$
+
 which is the same to Eq. (1.94)
 
 ### 1.11
@@ -302,13 +329,17 @@ v &= \int_{-\infty}^{\infty}\mbox{d}x\cdot a(x)\delta(x) \\
 &= \lim_{\varepsilon\rightarrow 0}\int_{-\varepsilon}^{\varepsilon}\mbox{d}x\cdot a(x)\frac{1}{2\varepsilon} \\
 \end{align*}
 $$
+
 Denote $a_{min}$ and $a_{max}$ the minimum and maximum value of $a$ in $\left[-\varepsilon, \varepsilon\right]$, 
+
 $$
 \begin{align*}
 2\varepsilon a_{min}\leq \int_{-\varepsilon}^{\varepsilon}\mbox{d}x\cdot a(x) < 2\varepsilon a_{max}
 \end{align*}
 $$
+
 or
+
 $$
 \begin{align*}
 a(0) = \lim_{\varepsilon\rightarrow 0} a_{min} \leq v \leq \lim_{\varepsilon\rightarrow 0} a_{max} = a(0)
@@ -365,6 +396,7 @@ TBD
 ### 1.18
 
 Note that the trial function is a Gaussian basis. Normalization factor:
+
 $$
 \begin{align*}
 \langle \tilde\Phi | \tilde\Phi \rangle &= \int_{-\infty}^{\infty}N^2\mathbf{e}^{-2ax^2}\mbox{d}x\\
@@ -372,7 +404,9 @@ $$
 &= N^2\sqrt\frac{\pi}{2a}
 \end{align*}
 $$
+
 It can be easily observed that $N$ will be canceled out:
+
 $$
 \begin{align*}
 \Epsilon &\leq \frac{\langle \tilde\Phi|\hat{\mathbf{H}}|\tilde\Phi\rangle}{\langle \tilde\Phi | \tilde\Phi \rangle}\\
@@ -383,11 +417,15 @@ $$
 &=\frac{a}{2}-a^\frac{3}{2}\sqrt\frac{2}{\pi}
 \end{align*}
 $$
+
 The minimum is
+
 $$
 \pi^{-1}
 $$
+
 when
+
 $$
 a=\frac{2}{\pi}
 $$
@@ -395,10 +433,13 @@ $$
 #### 1.19
 
 From 1.18, the norm of the trial basis is
+
 $$
 \langle\tilde\Psi|\tilde\Psi\rangle = N^2\sqrt\frac{\pi}{2a}
 $$
+
 And
+
 $$
 \nabla^2\equiv \frac{1}{r^2}\frac{\mbox{d}}{\mbox{d}r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2\sin\theta}\left(\sin\theta\frac{\partial f}{\partial \theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial}{\partial\varphi}
 $$
