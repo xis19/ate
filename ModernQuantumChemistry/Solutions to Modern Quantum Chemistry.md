@@ -39,7 +39,7 @@ $$
 Since
 
 $$
-\left(\mathbf{AB}\right)_{ij} = \sum_k \mathbf{A}_{ik}\mathbf{B}_{kj}
+\left( \mathbf{AB} \right) _{ij} = \sum_k \mathbf{A}_{ik}\mathbf{B}_{kj}
 $$
 
 thus
