@@ -31,7 +31,7 @@ $$
 which implies that $\mathbf{A}$ and $\mathbf{B}$ are commutable.
 
 $$
-\left\{\mathbf{A}, \mathbf{B}\right\} = 2\mathbf{A}\mathbf{B}
+\left \{ \mathbf{A}, \mathbf{B} \right \} = 2\mathbf{A}\mathbf{B}
 $$
 
 ### 1.3
