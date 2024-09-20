@@ -433,18 +433,21 @@ $$
 a=\frac{2}{\pi}
 $$
 
-#### 1.19
+### 1.19
 
-From 1.18, the norm of the trial basis is
+The norm of the trial basis is
 
 $$
-\langle\tilde\Psi|\tilde\Psi\rangle = N^2\sqrt\frac{\pi}{2a}
+\begin{align*}
+\langle\tilde\Psi|\tilde\Psi\rangle &= \int_0^\infty r^2\mbox{d}r N^2\mathbf{e}^{-2ar^2} \\
+&=\frac{N^2}{8a}\sqrt{\frac{\pi}{2a}}
+\end{align*}
 $$
 
 And
 
 $$
-\nabla^2\equiv \frac{1}{r^2}\frac{\mbox{d}}{\mbox{d}r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2\sin\theta}\left(\sin\theta\frac{\partial f}{\partial \theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial}{\partial\varphi}
+\nabla^2\equiv \frac{1}{r^2}\frac{\mbox{d}}{\mbox{d}r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2\sin\theta}\left(\sin\theta\frac{\partial}{\partial \theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial}{\partial\varphi}
 $$
 
 $$
@@ -457,7 +460,162 @@ $$
 
 $$
 \begin{align*}
-\langle \tilde\Psi |-\frac{1}{2}\nabla^2 | \tilde\Psi \rangle &= -\int_{0}^{\infty}\mbox{d}r\cdot aN^2(-3+2ar^2)\mathbf{e}^{-2ar^2}
+\langle \tilde\Psi |-\frac{1}{2}\nabla^2 | \tilde\Psi \rangle &= -\int_{0}^{\infty}r^2\mbox{d}r\cdot aN^2(-3+2ar^2)\mathbf{e}^{-2ar^2}\\
+&= \frac{3\sqrt{\pi}}{16\sqrt{2a}}N^2
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\langle\tilde\Psi|-\frac{1}{r}|\tilde\Psi\rangle &= -\int_0^\infty r^2\mbox{d}r\cdot \frac{1}{r}N^2\mathbf{e}^{-2ar^2}\\
+&=-\frac{N^2}{4a}
+\end{align*}
+$$
+
+
+$$
+\begin{align*}
+E &\leq \frac{\langle \tilde{\Psi}|-\frac{1}{2}\nabla^2-\frac{1}{r}|\tilde{\Psi}\rangle}{\langle\tilde\Psi|\tilde\Psi\rangle} \\
+&= \frac{3a}{2}-2\sqrt{\frac{2a}{\pi}}
+\end{align*}
+$$
+The minimum is
+$$
+E \leq -\frac{4}{3\pi}
+$$
+when
+$$
+a = \frac{8}{9\pi}
+$$
+
+
+### 1.20
+
+$$
+\begin{align*}
+\omega(\theta)&= O_{11}\cos^2\theta+O_{22}\sin^2\theta+O_{12}\sin{2\theta}
+\end{align*}
+$$
+
+and
+$$
+\frac{\mbox{d}\omega}{\mbox{d}\theta} =2O_{12}\cos2\theta-2O_{11}\cos\theta\sin\theta+2O_{22}\cos\theta\sin\theta
+$$
+Let
+$$
+\frac{\mbox{d}\omega}{\mbox{d}\theta} = 0
+$$
+and
+$$
+\begin{align*}
+\tan2\theta&=\frac{2O_{12}}{O_{11}-O_{22}} \\
+\theta&=\frac{1}{2}\arctan\frac{2O_{12}}{O_{11}-O_{22}}
+\end{align*}
+$$
+The reason $\omega(\theta)$ is a minimum is that $\vec{c}$ serves as a complete set of $\mathcal{O}$.
+
+### 1.21
+
+#### a
+
+Note that $|\Phi_i\rangle$ is a complete basis set:
+$$
+\begin{align*}
+|\tilde{\Phi}'\rangle &= \sum_{i=1}c_i|\Phi_i\rangle\\
+\langle\tilde{\Phi}'|\mathcal{H}|\tilde{\Phi}'\rangle &= \sum_{i=1}c_i^2\langle\tilde{\Phi}_i|\mathcal{H}|\tilde{\Phi}_i\rangle\\
+&= \sum_{i=1}c_i^2E_i\\
+&\geq \sum_{i=1}c_i^2E_1\\
+&= E_1
+\end{align*}
+$$
+
+#### b 
+
+This can be easily seen since $\langle\tilde{\Phi}|\tilde{\Phi}\rangle=x^2+y^2$ 
+
+#### c 
+
+Since
+$$
+\begin{align*}
+\langle\tilde{\Phi}'|\mathcal{H}|\tilde{\Phi}'\rangle &= x^2E_0+y^2E_1 \\
+&=x^2E_0+(1-x^2)E_1 \\
+&=E_1-x^2(E_1-E_0) \\
+&\geq \mathcal{E}_1
+\end{align*}
+$$
+thus $E_1 \geq \mathcal{E}_1$.
+
+### 1.22
+
+TBD
+
+## Chapter 2 Many-electron wave functions and operators
+
+### 2.1
+
+When $i$ and $j$ are both even:
+$$
+\begin{align*}
+\langle \chi_{i}| \chi_{j} \rangle &= \int\mbox{d}\vec{r}\psi_i^{\beta*}\psi_j^\beta\langle\beta|\beta\rangle \\
+&=\delta_{ij}
+\end{align*}
+$$
+Similarly when $i$ and $j$ are both odd $\langle\chi_i|\chi_j\rangle=\delta_{ij}$
+
+When $i$ is even and $j$ is odd:
+$$
+\begin{align*}
+\langle\chi_i|\chi_j\rangle&=\int\mbox{d}\vec{r}\psi_i^{\beta*}\psi_j^{\alpha}\langle\alpha|\beta\rangle\\
+&= 0
+\end{align*}
+$$
+since $\langle\alpha|\beta\rangle=0$.
+
+### 2.2
+
+Note that $\langle \Psi^{HP}|h(i)| \Psi^{HP}\rangle = \int\mbox{d}x_i\chi_\tau^*(x_i)\chi_\tau(x_i)\sum_{j\neq{i}}\langle \chi_j | \chi_j \rangle = \varepsilon_\tau$
+
+Thus
+$$
+\begin{align*}
+\langle \Psi^{HP}| \mathcal{H} |\Psi^{HP}\rangle &= \sum_i\langle \Psi^{HP}| h(i) |\Psi^{HP}\rangle \\
+&=\sum_i \varepsilon_i
+\end{align*}
+$$
+
+### 2.3
+
+Assuming $\chi_i = \chi_i^*$, or $\chi_i$ is real
+$$
+\begin{align*}
+\int\mbox{d}x_1\mbox{d}x_2|\Phi(x_1, x_2)|^2 &= \int\mbox{d}x_1\mbox{d}x_2\frac{1}{2}|\chi_i(x_1)\chi_j(x_2) - \chi_i(x_2)\chi_j(x_1)|^2 \\
+&= \int\mbox{d}x_1\mbox{d}x_2\frac{1}{2}\left[\chi_i(x_1)^2\chi_j(x_2)^2+\chi_i(x_2)^2\chi_i(x_1)^2-2\chi_i(x_1)\chi_j(x_1)\chi_i(x_2)\chi_j(x_2)\right]\\
+&= 1
+\end{align*}
+$$
+
+### 2.4
+
+From Exercise 2.2, $\Phi^{HP}_{12}$ and $\Phi_{21}^{HP}$ are both eigenvectors for $\mathcal{H}$ with eigenvalue $\varepsilon_1+\varepsilon_2$.
+$$
+\begin{align*}
+\langle \Psi | \mathcal{H} | \Psi \rangle &= \frac{1}{2}\sum_\gamma \left[\langle\chi_i(x_1)\chi_j(x_2)-\chi_i(x_2)\chi_j(x_1)|\mathcal{H}|\chi_i(x_1)\chi_j(x_2)-\chi_i(x_2)\chi_j(x_1)\rangle\right] \\
+&=\int\mbox{d}x_1\mbox{d}x_2\left[\chi_i^*(x_1)\chi_j^*(x_2)\mathcal{H}\chi_i(x_1)\chi_j(x_2) + \chi_i^*(x_2)\chi_j^*(x_1)\mathcal{H}\chi_i(x_2)\chi_j(x_1)-\right.\\
+&\left.\hspace{2cm}\chi_i^*(x_1)\chi_j^*(x_2)\mathcal{H}\chi_i(x_2)\chi_j(x_1)-\chi_i^*(x_2)\chi_j^*(x_1)\mathcal{H}\chi_i(x_1)\chi_j(x_2)\right]\\
+&=\varepsilon_1+\varepsilon_2
+\end{align*}
+$$
+
+
+### 2.5
+
+$$
+\begin{align*}
+\langle K | L \rangle &= \langle \chi_i\chi_j | \chi_k\chi_l \rangle \\
+&= \frac{1}{2}\langle\chi_i(x_1)\chi_j(x_2)-\chi_i(x_2)\chi_j(x_1)|\chi_k(x_1)\chi_l(x_2)-\chi_k(x_2)\chi_l(x_1)\rangle\\
+&= \frac{1}{2}\left(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk}-\delta_{il}\delta{jk}+\delta_{ik}\delta_{jl}\right)\\
+&= \delta_{ik}\delta_{jl} -\delta_{il}\delta_{jk}
 \end{align*}
 $$
 
